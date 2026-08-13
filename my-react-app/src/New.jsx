@@ -8,7 +8,7 @@ return(
 <>
 <button onClick={button}>clicked me</button>
     
-pwd
+<p>hello ji this is my first github project</p>
 
 </>
 )
