@@ -1,14 +1,11 @@
+// COmponet example
 
-
-// function App() {
-
-
-//   return (
+// function App (){
+// return(
 //     <>
-//     <p>heelo ji</p>
-//     <button> heelo ji my button</button>
+//     <p>rajingh</p>
 //     </>
-//   )
-// }
+// )
+//         }
 
 // export default App

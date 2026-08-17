@@ -1,17 +1,38 @@
-import "./Nya.css"
-function Raj(){
+import "./Nya.css";
+function Rard() {
+  return (
+ 
 
-    let button = ()=>{
-        alert("buttonclicked")
-    }
-return(
-<>
-<button onClick={button}>clicked me</button>
-    
-<p>hello ji this is my first github project</p>
 
-</>
-)
+    <div className="container">
+       <div className="card">
+        <h2>Aryan Singh</h2>
+        <p>Java Developer</p>
+        <button>View Profile</button>
+        <img src="favicon.svg" alt="" />
+      </div>
+          <div className="card">
+        <h2>Aryan Singh</h2>
+        <p>Java Developer</p>
+        <button>View Profile</button>
+        <img src="favicon.svg" alt="" />
+      </div>
+         <div className="card">
+        <h2>Aryan Singh</h2>
+        <p>Java Developer</p>
+        <button>View Profile</button>
+        <img src="favicon.svg" alt="" />
+      </div>
+        <div className="card">
+        <h2>Aryan Singh</h2>
+        <p>Java Developer</p>
+        <button>View Profile</button>
+        <img src="favicon.svg" alt="" />
+      </div>
+    </div>
+  );
 }
 
-export default Raj
+
+ 
+  export default Rard
