@@ -1,8 +1,53 @@
+import Api from './Api.json'
+
+// lecture 12
+//Looping in the JSX
+
+ export const Loop=()=>{
+    return(
+      <ul>
+        // Map methos use 
+        {Api.map((currentelememt)=>{
+          return(
+
+          // listitem will be antoher compenent pass with the props
+
+
+<Listitem   key={currentelememt.id}currentelememt = {currentelememt}/>
+)})}
+</ul>
+
+    )}
+  // define the map method 
+
+
+const Listitem=(props)=>{
+  console.log(props)// this is the (Api.map((currentelememt)) show all the element in then console window
+return(
+  
+   <li key={props}>
 
 
 
+<img src={props.currentelememt.img_url}  height="40%"
+width="40%"/>
+  
+ <p> Name: {props.currentelememt.name}</p>
+<p>id : {props.currentelememt.id}</p>
+<p>rating: {props.currentelememt.rating}</p>
+<p>description:{props.currentelememt.description}</p>
+<p>cast : {props.currentelememt.cast}</p> 
+  </li> 
+)
+}
+export default Loop
+
+    
+  //{/* // there is no for loop use in the JSX use to the 
+        // map method for {loop or itration} */}
 
 
+// export default Loop
 
 
 
