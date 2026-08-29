@@ -1,45 +1,113 @@
-import Api from './Api.json'
+//Lecture 13 
+//{ prpos discturing in the JSX} 
+
+
+ export  const Loop =(()=>{
+
+return(
+<>
+
+
+  {Api.map((ele)=>{
+return(
+  
+  <Singh    data = {ele} />
+)
+    })}
+    </>
+)
+ 
+ })
+  const Singh = ((props)=>{
+  const {name,gender,Age,greeting}= props.data
+ return(
+    <>
+     destrcture the data 
+   <h1> Name:  {name}</h1>
+    <p>Age:  {Age}</p>
+<p>Gender :   {gender}</p>
+<p>Greetings: {greeting}</p>
+
+    </>
+  )
+
+ })
+
+//  const Singh = ((props)=>{
+  
+//  return(
+//     <>
+//     // Without destrcture the data 
+//    <h1> Name:  {props.data.name}</h1>
+//     <p>Age:  {props.data.Age}</p>
+// <p>Gender :   {props.data.gender}</p>
+// <p>Greetings: {props.data.greeting}</p>
+
+//     </>
+//   )
+
+//  })
+
+
+
+
+
+
+
+
+
+
+
+// this is the API data fetch 
+ import Api from './Api.json'
 
 // lecture 12
 //Looping in the JSX
 
- export const Loop=()=>{
-    return(
-      <ul>
-        // Map methos use 
-        {Api.map((currentelememt)=>{
-          return(
+//  export const Loop=()=>{
+//     return(
+//       <ul>
+    
+//         {Api.map((currentelememt,index)=>{
+//           return(
 
-          // listitem will be antoher compenent pass with the props
-
-
-<Listitem   key={currentelememt.id}currentelememt = {currentelememt}/>
-)})}
-</ul>
-
-    )}
-  // define the map method 
+//           // listitem will be antoher compenent pass with the props
 
 
-const Listitem=(props)=>{
-  console.log(props)// this is the (Api.map((currentelememt)) show all the element in then console window
-return(
+// <Listitem   key={currentelememt.id} data = {currentelememt}/>
+// )})}
+// </ul>
+
+//     )}
+
+
+
+// const Listitem=(props)=>{
+//   // desturcting the data 
+// //  const  { data } = props;
+// // Again desturing data in  the just name cast genre imag etc
+
+//  const  {name,id,rating,description,cast,img_url,genre } = props.data;
+// return(
   
-   <li key={props}>
+//    <li key={props}>
+// {/* <p>Name : {name}</p> */}
 
 
-
-<img src={props.currentelememt.img_url}  height="40%"
-width="40%"/>
+ 
   
- <p> Name: {props.currentelememt.name}</p>
-<p>id : {props.currentelememt.id}</p>
-<p>rating: {props.currentelememt.rating}</p>
-<p>description:{props.currentelememt.description}</p>
-<p>cast : {props.currentelememt.cast}</p> 
-  </li> 
-)
-}
+//  <h1> Name: {name}</h1>
+//  <img src={img_url}  height="20%"
+// width="20%"/> 
+//  <p>Genre : {genre}</p>
+// <p>id : {id}</p> 
+// <p>rating: {rating}</p>
+// <p>description:{description}</p>
+// <p>cast : {cast}</p> 
+//   </li> 
+// )
+// }
+
 export default Loop
 
     
