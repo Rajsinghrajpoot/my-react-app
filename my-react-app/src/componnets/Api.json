@@ -1,22 +1,27 @@
 [
-    {
-    "name": "Raj singh ",
+   {
+    "name":"Rajsingh",
    "Age": "24",
    "gender" :"male",
   "developer": "Frontend -developer",
-  "greeting": "how are you  my dear friends"
+  "rating": " 9.5",
+  "greeting": "how are you  my dear friends",
+  "Button" : "Available"
   
-  },  {
-    "name": "Nilesh maurya  ",
+  }, 
+   {
+    "name":"Nileshmaurya",
    "Age": "22",
+    "rating": " 9",
    "gender" :"python  developer",
-   "greeting": "how are you my dear friends"
-  
+   "greeting": "how are you my dear friends",
+   "Button" : " Not Available"
   },  {
-    "name": "Rohit  kumar dubey ",
+    "name":"Rohitkumardubey",
    "Age": "20",
+     "rating": " 10",
    "gender" :"Backend -developer",
-   "greeting": "how are you  my dear friends"
-  
+   "greeting": "how are you  my dear friends",
+   "Button" : "Available"
   }
 ]

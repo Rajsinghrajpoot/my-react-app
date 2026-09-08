@@ -1,12 +1,22 @@
-
-
-/* .container {
-  display: flex;
-flex-direction: row;
-flex-wrap: wrap;
- 
+/* body{
+  background-color: rgb(223, 191, 191);
 }
-.card {
+h1{
+  color: red;
+}
+#root {
+  display: flex;
+gap: 20px;
+flex-wrap: wrap;
+height: 30%;
+width: 50%;
+border: 2px solid blue;
+/* flex-direction: column; */
+   
+ /* } */
+
+
+/* .card {
   width: 250px;
   padding: 20px;
   margin: 20px;
