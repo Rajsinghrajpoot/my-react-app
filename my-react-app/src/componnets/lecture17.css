@@ -1,6 +1,6 @@
 /* Card  */
 
-.Container {
+/* .Container {
     display: flex;
     flex-wrap: wrap;
        flex-wrap: nowrap;
@@ -14,16 +14,16 @@ background-color: aqua;
     text-align: center;
     margin:12px;
     /* border: 2px solid green; */
-    border-radius: 3.5px;
+    /* border-radius: 3.5px;
     box-shadow: 1px 1.5px 13px   rgb(196, 21, 202);
-}
-button{
+} */
+/* button{
     height: 2rem;
     width: 5rem;
     border: 1px solid blue;
     box-shadow:  1px 2px 3px red;
     border-radius: 5px;
-}
+}  */
 
 /* .Raj{
     color: rgb(243, 18, 18);

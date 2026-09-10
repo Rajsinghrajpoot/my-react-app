@@ -1,42 +1,36 @@
 // // // lecture 17
 // // // Styling in react 
+// Lecture 21 
 
-// Lecture 18 
-// Css Module
+// style component in  the react
 // import the css module in this file
-import style from "./card.module.css"
-
-import {students}  from"./Api.js"
- export  const Loop =(()=>{
-
-
-return(
-// appley the style the claname with the curly baraces
-<div className={style.Container}>
-{students.map((element)=>{
-  return(
- <div className={style.Box}>
-             {/* <img src="/images/lr.webp" height={"80rem"} width={"80rem"} alt="" /> */}
-<h1>Name : {element.name}</h1> 
-<p>Age : {element.age}</p>
-<p>Course: { element.course}</p>
-   <button onClick={() => alert("Thanks For Clicking")}>
-              {element.button}
-            </button>
-
-
-
-
- </div>
-  )
+// import style from "./card.module.css"
+// // import styled from "styled-components"
+// import {students}  from"./Api.js"
+//  export  const Loop =(()=>{
+// return(
+// // appley the style the claname with the curly baraces
+// <div className={style.Container}>
+// {students.map((element)=>{
+//   return(
+//  <div className={style.Box}>
+//              {/* <img src="/images/lr.webp" height={"80rem"} width={"80rem"} alt="" /> */}
+// <h1>Name : {element.name}</h1> 
+// <p className={style.Age}>Age : {element.age}</p>
+// <p>Course: { element.course}</p>
+//    <button onClick={() => alert("Thanks For Clicking")}>
+//               {element.button}
+//             </button>
+//  </div>
+//   )
  
-})}
+// })}
 
-</div>
+// </div>
 
 
-)
- })
+// )
+//  })
 
 
 
