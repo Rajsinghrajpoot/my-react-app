@@ -6,17 +6,16 @@ import { createRoot } from 'react-dom/client'
 //  import Practice from './Practice'
 // import { Singhji } from './componnets/Raj'
 //  import Singhji from './componnets/Raj'
- import { Loop } from './componnets/lecture26'
+// import { Loop } from './componnets/lecture26'
 //import { Styling } from './componnets/Lecture17'
 /// use for the Taileind Css Aplly 
 // import './index.css'
-
+import { Usestate } from './componnets/Hooks/Usestate'
 createRoot(document.getElementById('root')).render(
   <>
 
-<Loop/>
 
-
+<Usestate/>
 
  </>
 )

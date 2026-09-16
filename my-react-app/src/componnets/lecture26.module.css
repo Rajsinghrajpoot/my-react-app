@@ -1,12 +1,11 @@
 
-
-.Container {
-    display: flex;
-    flex-wrap: wrap;
-       flex-wrap: nowrap;
+.Container{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(221, 35, 35);
    
 }
-.Box:hover{
+/* .Box:hover{
     background-color: brown;
     transform: rotateX('180');
 }
@@ -34,4 +33,4 @@ button{
 button:hover{
     background-color: rgb(50, 73, 205);
     
-} 
+}  */
