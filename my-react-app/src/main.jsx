@@ -9,13 +9,15 @@ import { createRoot } from 'react-dom/client'
 // import { Loop } from './componnets/lecture26'
 //import { Styling } from './componnets/Lecture17'
 /// use for the Taileind Css Aplly 
-// import './index.css'
-import { Usestate } from './componnets/Hooks/Usestate'
+// // import './index.css'
+//import { Usestate } from "./componnets/Hooks/Usestate"
+import { Toggel } from './componnets/Hooks/Toggele'
 createRoot(document.getElementById('root')).render(
   <>
 
 
-<Usestate/>
+ <Toggel/>
+
 
  </>
 )

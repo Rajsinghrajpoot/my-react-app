@@ -1,5 +1,30 @@
- .Comatiner{
 
-   display: flex;
-   justify-content: center;
+.Container{
+  background-color: rgb(143, 214, 149);
+  height:200px;
+  width: 300px;
+border-radius: 60%;
+
+}
+#spantag{
+  border-radius: 50;
+  font-style: italic;
+font-size: 50px;
+
+
+
+}
+
+.Box{
+  padding: 50px;
+
+}
+.ON{
+  color: rgb(24, 22, 22);
+  transform: translateX(100px);
+
+}
+.OFF{
+color:rgb(2, 1, 1);
+transform: translateX(0);
 }
