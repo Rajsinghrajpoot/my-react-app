@@ -1,3 +1,4 @@
+  import { MdDeleteForever,MdCheckCircle  } from "react-icons/md";
 
 import { useState } from "react"
 import "./todo.css" 
@@ -5,62 +6,83 @@ export const Todo=(()=>{
   // initial value of the input box 
   const [ value ,  inputvalue] = useState("")
 const [ task,Storedata] = useState([]);
+const [ datetime,setdatetime]=useState("")
 const handleclick=(value)=>{
 inputvalue(value)
-// console.log(value)
 }
-  // use for the prevent default behaviour the form 
- 
 const handleFormSubmit=(event)=>{
  event.preventDefault() 
  if(!value) return;
+
  if(task.includes(value)) {
   inputvalue("")
   alert("already add")
 return;
  } 
- // use for the prevesious data store in the input box
- // it is use for the StoreData 
  Storedata((prev)=> [...prev,value]);
   inputvalue("")
-
+  
 }
-
-
-
+// Date and time 
+ setInterval(() => {
+ 
+const date = new Date();
+const Newdate = date.toLocaleDateString()
+const newtime = date.toLocaleTimeString()
+setdatetime(`${Newdate} - ${newtime}`)
+}, 1000);
+ const Clear=()=>{
+  alert("delete  All Data")
+ }
+ const DeleteButton =(data)=>{
+  alert("delete ho gya")
+   console.log(task)
+  console.log(data)  
+ 
+ }
 return(
   <>
 
 <section className="Container">
 <h1>To Do List</h1>
+
+<div className="Time">
+  <h2 id="time"> {datetime} </h2>
+ </div>
 </section>
 <section className="task">
+  
 <form onSubmit={handleFormSubmit}>
  <div className="task">
   <input type="text" name="TAsk" id="TAsk" value={value}
   onChange={(event) =>handleclick(event.target.value)} />  
    <button id="delete">ADD</button>
  </div>
-
-  
-   
-
+ 
 </form>
 
 </section>
+ 
 <section className="listvalue">
-  <ul>
-    {task.map((currele, index) => {
+  <ul> 
+    {task.map((currelem, index) => {
       return (
         <li className="raj" key={index}>
-          <h2>{currele}</h2>
-          <p><MdCheckCircle /></p>
-          <button><MdDeleteForever/></button>
+          <h2 id="color">{currelem}</h2>
+          <p id="CheckBox"> <MdCheckCircle  id="MD"/></p>
+          <button id="Delete" 
+          onClick={()=> DeleteButton(currelem)}
+          ><MdDeleteForever/></button>
         </li>
       );
     })}
+     
   </ul>
+  
 </section>
+<div className="ClearItem">
+  <button id="Clear" onClick={Clear}>Clear All</button>
+</div>
  </>
   
 )
@@ -123,42 +145,3 @@ return(
 
 
 
-
-  import { MdDeleteForever,MdCheckCircle  } from "react-icons/md";
-
-//  export const Todo=(()=>{
-
-//     return(
-      
-      
-//        <div className="Container">
-//       <h1 id="hero">Todo  List </h1>
-//       <input type="datetime-local" name="day" id="day" />
-
-// <div className="task">
-//   <input type="text" name="TAsk" id="TAsk" />
-//     <button id="delete">ADD</button>
-// </div>
-
-// <div className="task">
-//   <input type="text" name="TAsk" id="TAsk" />
-//   <button id="delete"><MdDeleteForever style={{color:"red"}}/></button>
-// </div>
-// <div className="task">
-//   <input type="text" name="TAsk" id="TAsk" />
-// <button id="delete"><MdDeleteForever style={{color:"red"}} /></button>
-// </div>
-// <div className="task">
-//   <input type="text" name="TAsk" id="TAsk" />
-//     <p onClick={Delete} id="delete"><MdDeleteForever style={{color:"red"}} /></p>
-// </div>
-//       <button>Clear</button>
-  
-//       </div>
-
-        
-//     )
-// })
-// const Delete=(()=>{
-//   alert("delte Successful")
-// })
