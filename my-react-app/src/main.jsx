@@ -12,12 +12,14 @@ import { createRoot } from 'react-dom/client'
 // // import './index.css'
 //import { Usestate } from "./componnets/Hooks/Usestate"
 // import { Toggel } from './componnets/Hooks/Toggele'
-import {Todo}from './componnets/Hooks/Todo'
+//import {Todo}from './componnets/Hooks/Todo'
+ import { Newlec } from './componnets/lecture/lecture41'
+
 createRoot(document.getElementById('root')).render(
   <>
 
 
- <Todo/>
+ <Newlec/>
 
 
  </>

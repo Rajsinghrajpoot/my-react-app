@@ -2,10 +2,17 @@
 
 import { useState } from "react"
 import "./todo.css" 
+// this help to when you need to change the localstorage name
+ const todokey = "datakey"
 export const Todo=(()=>{
   // initial value of the input box 
   const [ value ,  inputvalue] = useState("")
-const [ task,Storedata] = useState([]);
+const [task, Storedata] =
+ useState([])
+
+
+
+
 const [ datetime,setdatetime]=useState("")
 const handleclick=(value)=>{
 inputvalue(value)
@@ -23,6 +30,9 @@ return;
   inputvalue("")
   
 }
+//////
+// Loacal data storage
+localStorage.setItem(todokey,JSON.stringify(task))
 // Date and time 
  setInterval(() => {
  
@@ -36,13 +46,11 @@ setdatetime(`${Newdate} - ${newtime}`)
  }
  const DeleteButton =(data)=>{
   alert("delete ho gya")
-   console.log(task)
-  console.log(data)  
+ 
  
  }
 return(
   <>
-
 <section className="Container">
 <h1>To Do List</h1>
 
@@ -76,72 +84,11 @@ return(
         </li>
       );
     })}
-     
   </ul>
-  
 </section>
 <div className="ClearItem">
   <button id="Clear" onClick={Clear}>Clear All</button>
 </div>
  </>
-  
 )
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
