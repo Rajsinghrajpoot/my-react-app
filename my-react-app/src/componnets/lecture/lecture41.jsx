@@ -1,26 +1,75 @@
-/// try o understand usesate again
 
-// import { useState } from "react"
+import { useState } from "react";
+import "./new.css";
 
-// export const  Newlec=(()=>{
-//     // const [ oneClick,twoClick]=useState(0);
+export const Newlec = () => {
 
-// const [count,newClick]= useState(0);
+  // Increment
+  const [count, setCount] = useState(0);
 
-// const handleckick=()=>{
-//     newClick(count + 1)
-// }
-//     return(<>
-//     <h1>count{count}</h1>
-//    <button onClick={handleckick}> button</button>
-     
-//      {/* <button onClick={()=> twoClick(oneClick+1)}>Click </button> */}
-//     </> )
-// })
+  // Decrement
+  const [count1, setCountt] = useState(0);
 
-export const  Newlec=(()=>{
-return(
-<>
-<h1>hooks</h1>
-</>
-  )  })
+  // Reset increment
+  const reset = () => {
+    setCount(0);
+  };
+
+  // Reset decrement
+  const resett = () => {
+    setCountt(0);
+  };
+
+  return (
+    <>
+    <div className="main-container">
+
+      <h1 className="main-heading">React Counter App</h1>
+
+      <div className="container">
+
+        {/* Increment Card */}
+        <div className="counter-card">
+          <h2>Increment Counter</h2>
+
+          <p className="count-value">{count}</p>
+
+          <div className="button-group">
+            <button
+              className="increment-btn"
+              onClick={() => setCount(count + 1)}
+            >
+              Increment +
+            </button>
+
+            <button className="reset-btn" onClick={reset}>
+              Reset
+            </button>
+          </div>
+        </div>
+
+        {/* Decrement Card */}
+        <div className="counter-card">
+          <h2>Decrement Counter</h2>
+
+          <p className="count-value">{count1}</p>
+
+          <div className="button-group">
+            <button
+              className="decrement-btn"
+              onClick={() => setCountt(count1 - 1)}
+            >
+              Decrement -
+            </button>
+
+            <button className="reset-btn" onClick={resett}>
+              Reset
+            </button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+ </>
+  );
+};
